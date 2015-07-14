@@ -28,7 +28,7 @@
     [super layoutSubviews];
     
     CGFloat half_height = self.bounds.size.height / 2;
-    
+
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                                      byRoundingCorners:_corners
                                                            cornerRadii:CGSizeMake(half_height, half_height)];
