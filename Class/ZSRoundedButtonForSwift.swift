@@ -70,6 +70,8 @@ class ZSRoundedButtonForSwift: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5)
+        
         let half_height: CGFloat = self.bounds.size.height / 2
         let bezierPath: UIBezierPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners!, cornerRadii: CGSizeMake(half_height, half_height))
         

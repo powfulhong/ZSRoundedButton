@@ -27,6 +27,8 @@
 {
     [super layoutSubviews];
     
+    self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+    
     CGFloat half_height = self.bounds.size.height / 2;
 
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
