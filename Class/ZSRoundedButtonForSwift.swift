@@ -39,16 +39,16 @@ class ZSRoundedButtonForSwift: UIButton {
                     corners = UIRectCorner.BottomRight
                     
                 case .RBS_TopLeft_TopRight:
-                    corners = UIRectCorner.TopLeft | UIRectCorner.TopRight
+                    corners = [UIRectCorner.TopLeft, UIRectCorner.TopRight]
                     
                 case .RBS_TopLeft_BottomLeft:
-                    corners = UIRectCorner.TopLeft | UIRectCorner.BottomLeft
+                    corners = [UIRectCorner.TopLeft, UIRectCorner.BottomLeft]
                     
                 case .RBS_TopRight_BottomRight:
-                    corners = UIRectCorner.TopRight | UIRectCorner.BottomRight
+                    corners = [UIRectCorner.TopRight, UIRectCorner.BottomRight]
                     
                 case .RBS_BottomLeft_BottomRight:
-                    corners = UIRectCorner.BottomLeft | UIRectCorner.BottomRight
+                    corners = [UIRectCorner.BottomLeft, UIRectCorner.BottomRight]
                     
                 case .RBS_AllCorner:
                     fallthrough
