@@ -18,3 +18,6 @@
 ## Update 2015-07-14
 新增ZSRounededButton的Swift实现，使用方法不变，效果图如下：<br>
 ![](https://github.com/powfulhong/ZSRoundedButton/raw/master/ScreenShotAddSwift.png)
+
+## Update 2015-11-10
+Swift 2.0
