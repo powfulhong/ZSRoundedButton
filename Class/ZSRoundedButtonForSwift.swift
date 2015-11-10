@@ -18,6 +18,7 @@ enum ZSRoundedButtonStyle: Int {
     case RBS_TopRight_BottomRight = 6       /* 右上角 & 右下角 */
     case RBS_BottomLeft_BottomRight = 7     /* 左下角 & 右下角 */
     case RBS_AllCorner = 8                  /* 全部 */
+    case RBS_None = 9                       /* None */
 }
 
 @IBDesignable
@@ -50,18 +51,19 @@ class ZSRoundedButtonForSwift: UIButton {
                 case .RBS_BottomLeft_BottomRight:
                     corners = [UIRectCorner.BottomLeft, UIRectCorner.BottomRight]
                     
+                case .RBS_None:
+                    corners = nil
+                    
                 case .RBS_AllCorner:
-                    fallthrough
-                default:
                     corners = UIRectCorner.AllCorners
                 }
             } else {
-                corners = UIRectCorner.AllCorners
+                corners = nil
             }
         }
     }
     
-    @IBInspectable var borderColor: UIColor?
+    @IBInspectable var borderColor: UIColor? 
     
     @IBInspectable var borderWidth: CGFloat = 0
     
@@ -73,7 +75,7 @@ class ZSRoundedButtonForSwift: UIButton {
         self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5)
         
         let half_height: CGFloat = self.bounds.size.height / 2
-        let bezierPath: UIBezierPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners!, cornerRadii: CGSizeMake(half_height, half_height))
+        let bezierPath: UIBezierPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners ?? [], cornerRadii: CGSizeMake(half_height, half_height))
         
         /* 蒙版 */
         let maskLayer: CAShapeLayer = CAShapeLayer()
